@@ -13,11 +13,13 @@ export class PagInicioComponent implements OnInit {
   constructor(private getslider: SPaginicioService) {
     this.getslider.GetSlider().subscribe(image => {
       this.slider = image;
+     
     })
     
    }
 
   ngOnInit() {
+    
   }
 
 }

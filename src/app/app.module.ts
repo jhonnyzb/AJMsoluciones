@@ -33,4 +33,6 @@ import { PagInicioComponent } from './PaginasUsuario/pag-inicio/pag-inicio.compo
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+}

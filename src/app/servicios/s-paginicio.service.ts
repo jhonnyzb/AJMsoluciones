@@ -1,28 +1,31 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { ImageSlide } from '../Interface/image-slide';
 
-export interface ImagenSlide{ url: string, 
-  titulo:string, 
-  descripcion:string;
-}
+
+
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class SPaginicioService {
 
-  private ImageneslideCollection: AngularFirestoreCollection<ImagenSlide>;
-  imagenes: Observable<ImagenSlide[]>;
+  private ImageneslideCollection: AngularFirestoreCollection<ImageSlide>;
+ 
+  imagenes: Observable<ImageSlide[]>;
 
   constructor(private afs: AngularFirestore) { 
 
-    this.ImageneslideCollection = afs.collection<ImagenSlide>('Slider');
+    this.ImageneslideCollection = afs.collection<ImageSlide>('Slider');
     this.imagenes= this.ImageneslideCollection.valueChanges();
+  
   }
 
 
   GetSlider(){
+    
     return this.imagenes;
   }
 }
