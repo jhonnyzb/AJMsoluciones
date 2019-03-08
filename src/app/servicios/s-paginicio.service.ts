@@ -4,8 +4,6 @@ import { Observable } from 'rxjs';
 import { ImageSlide } from '../Interface/image-slide';
 
 
-
-
 @Injectable({
   providedIn: 'root'
 })

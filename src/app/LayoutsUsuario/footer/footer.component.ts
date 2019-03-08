@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SHeaderFooterUsuarioService } from 'src/app/servicios/s-header-footer-usuario.service';
+import { Footer } from '../../Interface/header-footer';
+
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+
+  footer: Footer[];
+  
+
+  constructor(private GetFoot: SHeaderFooterUsuarioService) {
+
+    this.GetFoot.GetFooter().subscribe(Footer => {
+      this.footer = Footer;
+      console.log(this.footer);
+    }
+    )
+
+  }
 
   ngOnInit() {
+
+
   }
+
 
 }

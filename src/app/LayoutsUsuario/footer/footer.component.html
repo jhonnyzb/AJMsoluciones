@@ -2,30 +2,15 @@
   <div class="container">
       <div class="row">
 
-          <div class="col-sm-3">
-              <h5>Donde Estamos</h5>
+          <div class="col-sm-3"  *ngFor="let items of footer">
+              <h5> {{items.Titulo}}</h5>
               <ul>
-                  <li>Calle 3 N° 12-56 Barrio Galan</li>
-                  <li>Tels. 3137789862 - 8059109</li>
-                  <li>Bogotá DC, Colombia.</li>
+                <li>{{items.Subtitulo1}}</li>
+                <li>{{items.Subtitulo2}}</li>
+                <li>{{items.Subtitulo3}}</li>
               </ul>
           </div>
-          <div class="col-sm-3">
-              <h5>Servicios</h5>
-              <ul>
-                  <li><a href="#">Company Information</a></li>
-                  <li><a href="#">Contact us</a></li>
-                  <li><a href="#">Reviews</a></li>
-              </ul>
-          </div>
-          <div class="col-sm-3">
-              <h5>Block</h5>
-              <ul>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Help desk</a></li>
-                  <li><a href="#">Forums</a></li>
-              </ul>
-          </div>
+          
           <div class="col-sm-3">
               <div class="social-networks">
                   <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>

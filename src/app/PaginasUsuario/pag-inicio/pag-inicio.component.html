@@ -4,7 +4,9 @@
     <!-- Carousel aqui -->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators"  *ngFor="let image of slider;let i = index" [attr.data-slide-to]="i" ngClass="i == 0 ? 'active' : ''" ></li>      
+        <li data-target="#carouselExampleIndicators"  *ngFor="let image of slider;let i = index" [attr.data-slide-to]="i" ngClass="i == 0 ? 'active' : ''" >
+          
+        </li>      
       </ol>
       <div class="carousel-inner">
        
@@ -15,7 +17,7 @@
             <p>{{image.descripcion}}</p>
           </div>
         </div>
-        
+       
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

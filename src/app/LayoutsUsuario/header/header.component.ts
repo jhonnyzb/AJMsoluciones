@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SHeaderFooterUsuarioService } from 'src/app/servicios/s-header-footer-usuario.service';
+
 
 @Component({
   selector: 'app-header',
@@ -7,7 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  header={
+    TelefonoHeader:'',
+    UrlLogo:''
+  };
+
+  constructor(private GetHeader: SHeaderFooterUsuarioService) {
+    
+    this.GetHeader.GetHeader().subscribe(Header => {
+      this.header = {TelefonoHeader:Header.TelefonoHeader,UrlLogo:Header.UrlLogo};
+
+      console.log(this.header);
+    }
+    )
+
+
+   }
 
   ngOnInit() {
   }

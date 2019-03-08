@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SPaginicioService } from 'src/app/servicios/s-paginicio.service';
+import { ImageSlide } from '../../Interface/image-slide'
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-pag-inicio',
@@ -8,13 +10,13 @@ import { SPaginicioService } from 'src/app/servicios/s-paginicio.service';
 })
 export class PagInicioComponent implements OnInit {
 
-  slider: any;
+  slider: ImageSlide[];
 
   constructor(private getslider: SPaginicioService) {
     this.getslider.GetSlider().subscribe(image => {
       this.slider = image;
-     
-    })
+    }
+    )
     
    }
 

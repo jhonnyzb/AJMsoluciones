@@ -4,3 +4,5 @@ export interface ImageSlide {
     titulo: string,
     descripcion: string;
 }
+
+

@@ -14,6 +14,8 @@ import { FooterComponent } from './LayoutsUsuario/footer/footer.component';
 import { LayoutPrincipalComponent } from './LayoutsUsuario/layout-principal/layout-principal.component';
 import { PagInicioComponent } from './PaginasUsuario/pag-inicio/pag-inicio.component';
 
+import { SHeaderFooterUsuarioService } from'./servicios/s-header-footer-usuario.service';
+import { SPaginicioService} from'./servicios/s-paginicio.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,7 @@ import { PagInicioComponent } from './PaginasUsuario/pag-inicio/pag-inicio.compo
     AngularFireStorageModule, 
     AppRoutingModule
   ],
-  providers: [],
+  providers: [SHeaderFooterUsuarioService,SPaginicioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
